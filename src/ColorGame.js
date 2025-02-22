@@ -24,20 +24,24 @@ const ColorGuessingGame = () => {
 
   const resetGame = () => {
     setTargetColor(getRandomColor());
-    setMessage("Guess the correct color!");
-    setScore(0)
+    setMessage("");
+    setScore(0);
   };
 
   return (
     <div className="game-container">
-      <h2 data-testid="gameInstructions" className="gameInstructions">Guess the correct color!</h2>
+      <h2 data-testid="gameInstructions" className="gameInstructions">
+        Guess the correct color!
+      </h2>
       <div
         className="color-box"
         data-testid="colorBox"
         style={{ backgroundColor: targetColor }}
       ></div>
 
-      <p data-testid="gameStatus" className="gameStatus">{message}</p>
+      <p data-testid="gameStatus" className="gameStatus">
+        {message}
+      </p>
       <div className="options">
         {colors.map((color) => (
           <button
@@ -50,8 +54,14 @@ const ColorGuessingGame = () => {
         ))}
       </div>
 
-      <p data-testid="score" className="score">Score: {score}</p>
-      <button className="button" data-testid="newGameButton" onClick={resetGame}>
+      <p data-testid="score" className="score">
+        Score: {score}
+      </p>
+      <button
+        className="button"
+        data-testid="newGameButton"
+        onClick={resetGame}
+      >
         New Game
       </button>
     </div>

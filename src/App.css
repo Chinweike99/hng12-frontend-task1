@@ -43,7 +43,20 @@
     width: 4rem;
     border: none;
     border-radius: 5px;
+    animation: SlideIn 1.5s ease-in-out forwards;
 }
+
+@keyframes SlideIn {
+    from {
+        opacity: 0; 
+        transform: translateY(-30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
 .gameStatus {
     position: absolute;
     bottom: 18.8rem;
@@ -109,10 +122,5 @@
     scale: 1.1;
 }
 
-/* @media (max-width: 768px) {
-    .options {
-        grid-template-columns: repeat(2, 1fr);
-    }
-} */
 
 
